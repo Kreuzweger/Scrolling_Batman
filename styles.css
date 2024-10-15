@@ -1,0 +1,21 @@
+body {
+    height: 200vh; /* Damit es genug Platz zum Scrollen gibt */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .logo {
+    width: 150px; /* Passe die Größe deines Logos an */
+    height: 150px;
+    transition: transform 0.1s linear;
+  }
+  
