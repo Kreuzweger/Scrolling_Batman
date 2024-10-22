@@ -23,3 +23,25 @@ html,body {
   height: 120px;
   object-fit: contain;
 }
+
+h1{
+  font-family: 'Press Gothic';
+  src:  url('/pfad-zur-schriftart/PressGothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+.bats {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* background-color: blueviolet; */
+}
+
+.Bats img {
+  width: 300px; /* Größe der Fledermaus festlegen */
+  height: auto; /* Höhe proportional zur Breite */
+}
