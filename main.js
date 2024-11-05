@@ -56,5 +56,5 @@ window.onload = function() {
           blackScreen.style.display = 'none'; // Entfernen Sie den schwarzen Bildschirm
           content.classList.add('show'); // Fügen Sie die Klasse zum Einblenden des Inhalts hinzu
       }, 1000); // entspricht der Dauer der Fade-Out-Animation
-  }, 500); // 2 Sekunden warten, bevor der Fade-Out beginnt
+  }, 900); // 2 Sekunden warten, bevor der Fade-Out beginnt
 };
