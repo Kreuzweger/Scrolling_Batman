@@ -1,55 +1,36 @@
-html,body {
+body {
   margin: 0;
   padding: 0;
-  height: 100vh; 
-  overflow-x: hidden; 
-  height: 600vh; 
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
 }
 
-body{
-
-    background-image: url('images/wayneTower_2.png');
-    background-size: cover;         /* Deckt den gesamten Bereich ab */
-    background-position: center;     /* Zentriert das Bild */
-    background-repeat: no-repeat;  
-    background-size: 100% auto;   
-
+.firstSection {
+  background-image: url('images/wayneTower_2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  /* width: 100vw; */
+  height: 3000px;
 }
 
 .logo-container {
   position: fixed;
-  bottom: 0; 
-  right: 0;  
+  bottom: 0;
+  right: 0;
   margin: 40px;
-
 }
 
-/* .wayneTower img{
-  margin: 0;
-  padding: 0;
-width: 100%;
-} */
-
 .logo {
-  width: 120px; 
+  width: 120px;
   height: 120px;
   object-fit: contain;
 }
 
-h1{
+h1 {
   font-family: 'Press Gothic';
-  src:  url('/pfad-zur-schriftart/PressGothic.ttf') format('truetype');
+  src: url('/pfad-zur-schriftart/PressGothic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
-
-
 
 .bats {
   position: absolute;
@@ -57,19 +38,6 @@ h1{
   right: 0;
   pointer-events: none;
 
-}
-
-
-/* .Bats img {
-  width: 300px;  
-  height: auto;  
-} */
-
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  overflow: hidden; /* Verhindert Scrollen während des Fadings */
 }
 
 #black-screen {
@@ -80,18 +48,30 @@ body {
   height: 100%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 1) 100%);
 
-  z-index: 1000; /* Stellt sicher, dass es über allem ist */
+  z-index: 1000;
+  /* Stellt sicher, dass es über allem ist */
   opacity: 1;
-  transition: opacity 1s ease-out; /* Fade-Out Effekt */
+  transition: opacity 1s ease-out;
+  /* Fade-Out Effekt */
 }
 
 #content {
-  display: none; /* Inhalt ist zu Beginn versteckt */
-  opacity: 0; /* Beginnt unsichtbar */
-  transition: opacity 1s ease-in; /* Fade-In Effekt */
+  display: none;
+  /* Inhalt ist zu Beginn versteckt */
+  opacity: 0;
+  /* Beginnt unsichtbar */
+  transition: opacity 1s ease-in;
+  /* Fade-In Effekt */
 }
 
 #content.show {
-  display: block; /* Sichtbar machen */
-  opacity: 1; /* Sichtbar */
+  display: block;
+  /* Sichtbar machen */
+  opacity: 1;
+  /* Sichtbar */
+}
+
+.secondSection{
+  background-color: blueviolet;
+  height: 1200px;
 }
