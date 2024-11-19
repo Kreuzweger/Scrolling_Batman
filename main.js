@@ -16,6 +16,8 @@ gsap.to(".logo", {
 });
 
 
+
+
 // gsap.fromTo(".bats img", 
 //   {
 //     x: '-100vw', 
@@ -58,3 +60,31 @@ window.onload = function() {
       }, 1000); // entspricht der Dauer der Fade-Out-Animation
   }, 900); // 2 Sekunden warten, bevor der Fade-Out beginnt
 };
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Parallax-Effekt
+gsap.to("#foregroundTower", { // Vordergrund (Tower.png)
+  y: "30%", // Bewegt sich schneller
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#firstSection", // Animationsbereich
+    start: "top top", // Start, wenn #firstSection oben sichtbar ist
+    end: "bottom top", // Ende, wenn #firstSection den Viewport verlässt
+    scrub: true, // Animation mit Scrollen synchronisieren
+    markers: false // Markierungen für Debugging deaktivieren
+  }
+});
+
+gsap.to("#backgroundTower", { // Hintergrund (BackgroundTower.png)
+  y: "10%", // Bewegt sich langsamer
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#firstSection", 
+    start: "top top", 
+    end: "bottom top", 
+    scrub: true,
+    markers: false
+  }
+});
