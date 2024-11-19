@@ -5,11 +5,12 @@ body {
 }
 
 .wayneTower {
-  background-image: url('images/wayneTower_2.png');
+  background-image: url('images/BackgroundTower.png');
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100vw auto;
 }
+
 
 
 .logo-container {

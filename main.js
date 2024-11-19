@@ -16,6 +16,8 @@ gsap.to(".logo", {
 });
 
 
+
+
 // gsap.fromTo(".bats img", 
 //   {
 //     x: '-100vw', 
@@ -62,6 +64,7 @@ window.onload = function() {
 
 
 
+
 gsap.to(".Aufzug-Paralax img", {
   scrollTrigger: {
     trigger: ".Aufzug-Paralax",
@@ -72,3 +75,32 @@ gsap.to(".Aufzug-Paralax img", {
     pinSpacing: false // Removes additional white space caused by pinning
   }
 });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Parallax-Effekt
+gsap.to("#foregroundTower", { // Vordergrund (Tower.png)
+  y: "30%", // Bewegt sich schneller
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#firstSection", // Animationsbereich
+    start: "top top", // Start, wenn #firstSection oben sichtbar ist
+    end: "bottom top", // Ende, wenn #firstSection den Viewport verlässt
+    scrub: true, // Animation mit Scrollen synchronisieren
+    markers: false // Markierungen für Debugging deaktivieren
+  }
+});
+
+gsap.to("#backgroundTower", { // Hintergrund (BackgroundTower.png)
+  y: "10%", // Bewegt sich langsamer
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#firstSection", 
+    start: "top top", 
+    end: "bottom top", 
+    scrub: true,
+    markers: false
+  }
+});
+
