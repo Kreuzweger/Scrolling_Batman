@@ -58,3 +58,17 @@ window.onload = function() {
       }, 1000); // entspricht der Dauer der Fade-Out-Animation
   }, 900); // 2 Sekunden warten, bevor der Fade-Out beginnt
 };
+
+
+
+
+gsap.to(".Aufzug-Paralax img", {
+  scrollTrigger: {
+    trigger: ".Aufzug-Paralax",
+    start: "top top", // When the image-container's top hits the top of the viewport
+    end: "+=500",     // Duration of the fixed effect in scroll distance
+    scrub: true,      // Smooth scrolling animation
+    pin: true,        // Keeps the element fixed in place
+    pinSpacing: false // Removes additional white space caused by pinning
+  }
+});
