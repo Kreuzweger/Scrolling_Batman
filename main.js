@@ -64,27 +64,27 @@ window.onload = function() {
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Parallax-Effekt
-gsap.to("#foregroundTower", { // Vordergrund (Tower.png)
-  y: "30%", // Bewegt sich schneller
-  ease: "none",
+// Parallax-Effekt zwischen Vordergrund (Tower.png) und Hintergrund (BackgroundTower.png)
+gsap.to(".wayneTower img:first-child", { // Vordergrund (Tower.png)
+  y: "30%", // Bewegt sich schneller nach unten
+  ease: "none", // Keine Beschleunigung für gleichmäßigen Effekt
   scrollTrigger: {
-    trigger: "#firstSection", // Animationsbereich
-    start: "top top", // Start, wenn #firstSection oben sichtbar ist
-    end: "bottom top", // Ende, wenn #firstSection den Viewport verlässt
-    scrub: true, // Animation mit Scrollen synchronisieren
-    markers: false // Markierungen für Debugging deaktivieren
+    trigger: "#firstSection", // Aktiviert innerhalb von #firstSection
+    start: "top top", // Startet, wenn der obere Rand von #firstSection sichtbar wird
+    end: "bottom top", // Endet, wenn der untere Rand von #firstSection oben ist
+    scrub: true, // Synchronisiert mit Scrollen
+    markers: true // Debug-Markierungen ausblenden
   }
 });
 
-gsap.to("#backgroundTower", { // Hintergrund (BackgroundTower.png)
-  y: "10%", // Bewegt sich langsamer
+gsap.to(".wayneTower img:last-child", { // Hintergrund (BackgroundTower.png)
+  y: "10%", // Bewegt sich langsamer nach unten
   ease: "none",
   scrollTrigger: {
     trigger: "#firstSection", 
     start: "top top", 
     end: "bottom top", 
-    scrub: true,
-    markers: false
+    scrub: true, 
+    markers: true
   }
 });
