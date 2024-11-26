@@ -93,3 +93,23 @@ h1 {
   height: 100%; /* Make the image taller to allow for parallax effect */
   object-fit: cover;
 }
+
+.text-overlay {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0; /* Start hidden */
+  transform: scale(0.8); /* Start slightly smaller */
+  position: absolute;
+}
+
+h1{
+  margin-bottom: 300px;
+  margin-left: 60px;
+  position: absolute;
+}
+
+.spacer{
+  height: 200px;
+  background-color: black;
+}
