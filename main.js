@@ -65,15 +65,17 @@ window.onload = function() {
 
 
 
-gsap.to(".Aufzug-Paralax img", {
-  scrollTrigger: {
-    trigger: ".Aufzug-Paralax",
-    start: "top top", // When the image-container's top hits the top of the viewport
-    end: "+=500",     // Duration of the fixed effect in scroll distance
-    scrub: true,      // Smooth scrolling animation
-    pin: true,        // Keeps the element fixed in place
-    pinSpacing: false // Removes additional white space caused by pinning
-  }
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Pin the aufzug.png image
+ScrollTrigger.create({
+  trigger: ".secondSection",  // Use the existing section as the trigger
+  start: "top top",        // Start when the section's top reaches the center of the viewport
+  end: "bottom bottom",               // Pin for 300px worth of scroll (adjust as needed)
+  pin: ".secondSection img",  // Pin the aufzug.png image
+  pinSpacing: false,          // Prevent extra spacing after pinning
+  markers: true               // Show debugging markers
 });
 
 
