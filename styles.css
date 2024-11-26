@@ -73,6 +73,23 @@ h1 {
 }
 
 .secondSection{
-  background-color: blueviolet;
-  height: 1200px;
+  background-image: url(images/Fels.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+
+  
+}
+
+.Aufzug-Paralax{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Aufzug-Paralax img{
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Make the image taller to allow for parallax effect */
+  object-fit: cover;
 }
