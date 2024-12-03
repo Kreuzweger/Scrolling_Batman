@@ -71,7 +71,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Pin the aufzug.png image
 ScrollTrigger.create({
   trigger: ".secondSection",  // Use the existing section as the trigger
-  start: "top top",        // Start when the section's top reaches the center of the viewport
+  start: "+=150",        // Start when the section's top reaches the center of the viewport
   end: "+=1400",               // Pin for 300px worth of scroll (adjust as needed)
   pin: ".secondSection img",  // Pin the aufzug.png image
   pinSpacing: false,          // Prevent extra spacing after pinning
