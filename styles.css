@@ -113,3 +113,45 @@ h1{
   height: 200px;
   background-color: black;
 }
+
+/* .scrolling-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; 
+  position: relative;
+}
+
+.scrolling-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; 
+  width: auto; 
+  animation: image-scroll 10s linear infinite;
+}
+
+
+@keyframes image-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} */
+.scroll-section {
+  position: relative;
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300%; 
+  background-image: url('images/Batcave.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+

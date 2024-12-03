@@ -106,3 +106,19 @@ gsap.to(".wayneTower img:last-child", { // Hintergrund (BackgroundTower.png)
   }
 });
 
+
+
+  // Ensure GSAP is loaded before running
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate horizontal background scrolling
+  gsap.to(".background", {
+    x: "-200%", // Moves the background fully left (100% for each extra width)
+    scrollTrigger: {
+      trigger: ".scroll-section", // The section to observe for scrolling
+      start: "top top", // Start when the section enters the viewport
+      end: "bottom top", // End when the section leaves the viewport
+      scrub: true, // Sync with scroll
+    },
+  });
+
