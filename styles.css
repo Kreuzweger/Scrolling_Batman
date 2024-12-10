@@ -143,20 +143,21 @@ h1{
 } */
 .scroll-section {
   position: relative;
-  height: 100vh; /* Ensure it takes exactly the viewport height */
-  overflow: hidden; /* Prevent scrolling artifacts */
+  height: 100vh;  /* Full viewport height */
+  overflow: hidden;  /* Prevent overflow during scroll */
 }
 
 .background {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%; /* Ensure it fills the section */
-  width: 300%; /* Allows for horizontal scrolling */
+  height: 100%;  /* Make sure the image fills the section */
+  width: 300%;  /* Allow for horizontal scrolling */
   background-image: url('images/Batcave.png');
   background-size: cover;
   background-repeat: no-repeat;
-  transform: translateX(0); /* Initialize transform for GSAP control */
+  transform: translateX(0);  /* For GSAP to control movement */
+  object-fit: cover;  /* Ensure the image is properly fitted */
 }
 
 div.scroll-container {

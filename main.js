@@ -106,17 +106,28 @@ gsap.to(".wayneTower img:last-child", { // Hintergrund (BackgroundTower.png)
   }
 });
 
+// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
+// Create the scroll-triggered animation
 gsap.to(".background", {
-  x: "-200%", // Horizontal scroll
-  ease: "none", // Linear easing
+  x: "-160%", // Move the background fully horizontally
+  ease: "power1.inOut", // Smooth ease for the scroll motion
   scrollTrigger: {
     trigger: ".scroll-section",
-    start: "top top",
-    end: "bottom top",
-    scrub: true,
-    pin: true,
-    pinSpacing: false,
-  },
+    start: "top top", // Start when the section hits the top
+    end: "bottom top", // Stop when the section leaves the top
+    scrub: 5, // Synchronize the movement with the scroll
+    pin: true, // Pin the section during the scroll
+    pinSpacing: false, // Prevent extra spacing after the pin
+    onComplete: () => {
+      // Once the horizontal scroll completes, start the zoom effect
+      gsap.to(".background", {
+        scale: 40,  // Zoom into the Batcave
+        duration: 2, // Duration of the zoom effect
+        ease: "power2.inOut", // Smooth zooming ease
+      });
+    }
+  }
 });
+
