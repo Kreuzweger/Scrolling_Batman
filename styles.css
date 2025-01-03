@@ -197,3 +197,22 @@ div.scroll-container img {
   color: rgb(138, 138, 138);
   background-color: rgb(99, 0, 0);  
 }
+
+
+/* ----------EFFECTSPRESETS----------- */
+
+.ml4 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.5em;
+  color: white;
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0.3em;
+  right: 0;
+  opacity: 0; 
+}
+
