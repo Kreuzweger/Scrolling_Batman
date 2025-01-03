@@ -170,3 +170,30 @@ div.scroll-container {
 div.scroll-container img {
   padding: 10px;
 }
+
+.button-container {
+  position: fixed;         
+  bottom: 30px;            
+  left: 50%;        
+  transform: translateX(-50%); 
+  opacity: 100;             
+  visibility: visible;      
+  transition: opacity 1s ease-in-out;
+  z-index: 1000; 
+}          
+
+#nextPageButton {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: rgba(96, 0, 0, 0.204);  
+  color: rgba(58, 58, 58, 0.169);           
+  border: none;          
+  border-radius: 5px;    
+  cursor: pointer;        
+  transition: background-color 0.3s ease; 
+}
+
+#nextPageButton:hover {
+  color: rgb(138, 138, 138);
+  background-color: rgb(99, 0, 0);  
+}
