@@ -89,7 +89,7 @@ gsap.to(".wayneTower img:first-child", { // Vordergrund (Tower.png)
     start: "top top", // Startet, wenn der obere Rand von #firstSection sichtbar wird
     end: "bottom bottom", // Endet, wenn der untere Rand von #firstSection oben ist
     scrub: true, // Synchronisiert mit Scrollen
-    markers: true // Debug-Markierungen ausblenden
+    markers: false // Debug-Markierungen ausblenden
   }
 });
 
@@ -101,7 +101,7 @@ gsap.to(".wayneTower img:last-child", { // Hintergrund (BackgroundTower.png)
     start: "top top",
     end: "bottom top",
     scrub: true,
-    markers: true
+    markers: false
   }
 });
 
