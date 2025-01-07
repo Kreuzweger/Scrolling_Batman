@@ -171,7 +171,7 @@ div.scroll-container img {
   padding: 10px;
 }
 
-.button-container {
+/* .button-container {
   position: fixed;         
   bottom: 30px;            
   left: 50%;        
@@ -196,7 +196,35 @@ div.scroll-container img {
 #nextPageButton:hover {
   color: rgb(138, 138, 138);
   background-color: rgb(99, 0, 0);  
+} */
+
+.button-container {
+  position: fixed;         /* Fix the button at the bottom of the viewport */
+  bottom: 30px;            /* Keep some space from the bottom */
+  left: 50%;               /* Center horizontally */
+  transform: translateX(-50%);  /* Perfect centering */
+  opacity: 0;              /* Initially hidden */
+  visibility: hidden;      /* Initially hidden */
+  transition: opacity 1s ease-in-out;
+  z-index: 1000;           /* Ensure it appears above other elements */
 }
+
+#nextPageButton {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  color: rgb(138, 138, 138);
+  background-color: rgb(99, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#nextPageButton:hover {
+  background-color: rgb(143, 0, 0);   /* Red button */
+  color: rgb(203, 203, 203);
+}
+
 
 
 /* ----------EFFECTSPRESETS----------- */

@@ -107,23 +107,26 @@ gsap.to(".wayneTower img:last-child", { // Hintergrund (BackgroundTower.png)
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Horizontal scroll effect for batcave
 gsap.to(".background", {
   x: "-67%", // Move the background fully horizontally
   ease: "power1.inOut", // Smooth easing
   scrollTrigger: {
-    trigger: ".scroll-section",
-    start: "top top", // Start when the section hits the top
-    end: "bottom center", // End when the section leaves the center
-    scrub: 5, // Synchronize with scroll
-    pin: true, // Pin the section during the scroll
-    pinSpacing: false, // Prevent extra spacing after the pin
-    onComplete: () => {
-      // Make the button visible after the animation completes
-      gsap.to(".button-container", {
-        opacity: 100,
-        visibility: "visible", // Make the button visible
-        duration: 1, // Smooth transition
-      });
+    trigger: ".scroll-section",  // Start based on the scroll section
+    start: "top top",            // Start when the section hits the top
+    end: "bottom center",        // End scroll halfway through
+    scrub: 5,                    // Synchronize with scroll
+    pin: true,                   // Pin the section during the scroll
+    pinSpacing: false,           // Prevent extra spacing
+    onUpdate: (self) => {
+      // Show the button when batcave is halfway through its movement
+      if (self.progress >= 0.5) {
+        gsap.to(".button-container", {
+          opacity: 1,
+          visibility: "visible",
+          duration: 1,           // Smooth fade-in transition
+        });
+      }
     }
   }
 });
@@ -132,6 +135,7 @@ gsap.to(".background", {
 document.getElementById("nextPageButton").addEventListener("click", function() {
     window.location.href = "videoPage.html";  // Change this to your desired page URL
 });
+
 
 var ml4 = {};
 ml4.opacityIn = [0,1];
