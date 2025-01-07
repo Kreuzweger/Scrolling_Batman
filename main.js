@@ -109,7 +109,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Horizontal scroll effect for batcave
 gsap.to(".background", {
-  x: "-67%", // Move the background fully horizontally
+  x: "-68%", // Move the background fully horizontally
   ease: "power1.inOut", // Smooth easing
   scrollTrigger: {
     trigger: ".scroll-section",  // Start based on the scroll section
@@ -124,7 +124,7 @@ gsap.to(".background", {
         gsap.to(".button-container", {
           opacity: 1,
           visibility: "visible",
-          duration: 1,           // Smooth fade-in transition
+          duration: 1.5,           // Smooth fade-in transition
         });
       }
     }
