@@ -1,6 +1,11 @@
 // Select video element
 const vid = document.getElementById('v0');
 
+// Preload the video completely before playing
+vid.onloadeddata = () => {
+    console.log('Video preloaded successfully');
+};
+
 // Pause video on load
 vid.pause();
 

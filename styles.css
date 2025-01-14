@@ -1,247 +1,37 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(0, 0, 0);
-  overflow-x: hidden; 
-  
-}
-.wayneTower {
-  background-image: url('images/BackgroundTower.png');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100vw auto;
 
-}
+    #set-height {
+      height: 3000vh;
+    }
 
+    #v0 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
 
+    #black-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 1) 100%);
+      z-index: 1000;
+      opacity: 1;
+      transition: opacity 1s ease-out;
+      pointer-events: none;
+    }
 
-.logo-container {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 40px;
-}
+    .logo-container {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: 40px;
+    }
 
-.logo {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-}
-
-h1 {
-  font-family: 'Press Gothic';
-  src: url('/pfad-zur-schriftart/PressGothic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.bats {
-  position: absolute;
-  top: 0;
-  right: 0;
-  pointer-events: none;
-
-}
-
-#black-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 1) 100%);
-
-  z-index: 1000;
-  /* Stellt sicher, dass es über allem ist */
-  opacity: 1;
-  transition: opacity 1s ease-out;
-  /* Fade-Out Effekt */
-}
-
-#content {
-  display: none;
-  /* Inhalt ist zu Beginn versteckt */
-  opacity: 0;
-  /* Beginnt unsichtbar */
-  transition: opacity 1s ease-in;
-  /* Fade-In Effekt */
-}
-
-#content.show {
-  display: block;
-  /* Sichtbar machen */
-  opacity: 1;
-  /* Sichtbar */
-}
-
-.secondSection{
-  background-image: url(images/Fels.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100vw auto;
-
-  
-}
-
-.Aufzug-Paralax{
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.Aufzug-Paralax img{
-  position: absolute;
-  width: 100%;
-  height: 100%; /* Make the image taller to allow for parallax effect */
-  object-fit: cover;
-}
-
-.text-overlay {
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  opacity: 0; /* Start hidden */
-  transform: scale(0.8); /* Start slightly smaller */
-  position: absolute;
-}
-
-h1{
-  margin-bottom: 300px;
-  margin-left: 60px;
-  position: absolute;
-}
-
-.spacer{
-  height: 200px;
-  background-color: black;
-}
-
-/* .scrolling-container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; 
-  position: relative;
-}
-
-.scrolling-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%; 
-  width: auto; 
-  animation: image-scroll 10s linear infinite;
-}
-
-
-@keyframes image-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-} */
-.scroll-section {
-  position: relative;
-  height: 100vh;  /* Full viewport height */
-  overflow: hidden;  /* Prevent overflow during scroll */
-}
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;  /* Make sure the image fills the section */
-  width: 300%;  /* Allow for horizontal scrolling */
-  background-image: url('images/Batcave_2.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: translateX(0);  /* For GSAP to control movement */
-  object-fit: cover;  /* Ensure the image is properly fitted */
-}
-
-div.scroll-container {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
-}
-
-div.scroll-container img {
-  padding: 10px;
-}
-
-/* .button-container {
-  position: fixed;         
-  bottom: 30px;            
-  left: 50%;        
-  transform: translateX(-50%); 
-  opacity: 100;             
-  visibility: visible;      
-  transition: opacity 1s ease-in-out;
-  z-index: 1000; 
-}          
-
-#nextPageButton {
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  background-color: rgba(96, 0, 0, 0.204);  
-  color: rgba(58, 58, 58, 0.169);           
-  border: none;          
-  border-radius: 5px;    
-  cursor: pointer;        
-  transition: background-color 0.3s ease; 
-}
-
-#nextPageButton:hover {
-  color: rgb(138, 138, 138);
-  background-color: rgb(99, 0, 0);  
-} */
-
-.button-container {
-  position: fixed;         /* Fix the button at the bottom of the viewport */
-  bottom: 30px;            /* Keep some space from the bottom */
-  left: 50%;               /* Center horizontally */
-  transform: translateX(-50%);  /* Perfect centering */
-  opacity: 0;              /* Initially hidden */
-  visibility: hidden;      /* Initially hidden */
-  transition: opacity 1s ease-in-out;
-  z-index: 1000;           /* Ensure it appears above other elements */
-}
-
-#nextPageButton {
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  color: rgb(138, 138, 138);
-  background-color: rgb(99, 0, 0);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#nextPageButton:hover {
-  background-color: rgb(143, 0, 0);   /* Red button */
-  color: rgb(203, 203, 203);
-}
-
-
-
-/* ----------EFFECTSPRESETS----------- */
-
-.ml4 {
-  position: relative;
-  font-weight: 900;
-  font-size: 4.5em;
-  color: white;
-}
-.ml4 .letters {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  top: 0.3em;
-  right: 0;
-  opacity: 0; 
-}
-
-
+    .logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
