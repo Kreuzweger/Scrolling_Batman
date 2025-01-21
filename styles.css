@@ -153,7 +153,7 @@ h1{
   left: 0;
   height: 100%;  /* Make sure the image fills the section */
   width: 300%;  /* Allow for horizontal scrolling */
-  background-image: url('images/Batcave_3.png');
+  background-image: url('images/Batcave_5.png');
   background-size: cover;
   background-repeat: no-repeat;
   transform: translateX(0);  /* For GSAP to control movement */
