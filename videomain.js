@@ -52,3 +52,16 @@ gsap.to(".logo", {
     pin: true
   }
 });
+
+let scrollTimeout;
+
+window.onscroll = () => {
+  if (scrollTimeout) {
+    clearTimeout(scrollTimeout);
+  }
+  scrollTimeout = setTimeout(() => {
+    const scrollFraction = Math.min(window.pageYOffset / (scrollableHeight - window.innerHeight), 1);
+    vid.currentTime = scrollFraction * vid.duration;
+    vid.pause();
+  }, 20); // Aktualisiert nur alle 20ms
+};
